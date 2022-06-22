@@ -1,17 +1,15 @@
-var hid = false;
+var hide = true ;
 function showmore() {
-    if (hid == false) {
-        var hidden_ = document.querySelector('#hidden');
-        hidden_.classList.toggle("hidden");
-        document.getElementById("hidden").style.display = "flex";
-        hid = true;
+    if (hide) {
+        var hidden = document.querySelector('#hidden');
+        hidden.style.display = "flex";
+        hide = false;
         document.getElementById("more").innerHTML = "show less"
     }
     else {
-        var hidden_ = document.querySelector('#hidden');
-        hidden_.classList.toggle("hidden");
-        document.getElementById("hidden").style.display = "none";
-        hid = false;
+        var hidden = document.querySelector('#hidden');
+        hidden.style.display = "none";
+        hide = true;
         document.getElementById("more").innerHTML = "show more"
     }
 }

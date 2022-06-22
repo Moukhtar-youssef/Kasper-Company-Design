@@ -7,10 +7,8 @@
 }
 /* end variables */
 /* Start global rules */
-.hidden{
-    display: none;
-}
 #hidden{
+    display: none;
     flex-wrap: wrap;
 }
 *{
@@ -417,8 +415,12 @@ header .form i:hover{
     margin-top: 60px;
 }
 .portfolio .imgs-container .box{
+    display: flex;
     position:relative;
     overflow: hidden;
+}
+.portfolio .imgs-container .box:hover{
+    cursor: pointer;
 }
 @media (min-width:768px){
     .portfolio .imgs-container .box{
@@ -434,6 +436,42 @@ header .form i:hover{
 .portfolio .imgs-container .box img{
     max-width: 100%;
     transition: 0.3s;
+}
+.portfolio .imgs-container .box .plus{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio .imgs-container .box .plus::before{
+    content: "";
+    position: absolute;
+    display: none;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    align-items: center;
+    justify-content: center;
+}
+.portfolio .imgs-container .box .plus::after{
+    content: "+";
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 70px;
+    font-weight: 100;
+}
+.portfolio .imgs-container .box:hover .plus::before,
+.portfolio .imgs-container .box:hover .plus::after{
+    display: flex;
 }
 .portfolio .imgs-container .box .caption{
     position: absolute;
@@ -826,5 +864,28 @@ header .form i:hover{
     font-family: "Font Awesome 5 Free";
     content: "\f10e";
     font-weight: 900;
+}
+.quote .container span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #cccc;
+}
+.quote .container span::after{
+    content: "";
+    display: inline-block;
+    margin-left: 5px;
+    width: 30px;
+    height: 1px;
+    background-color: #cccc;
+}
+.quote .container span::before{
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    width: 30px;
+    height: 1px;
+    background-color: #cccc;
 }
 /* end quote */
