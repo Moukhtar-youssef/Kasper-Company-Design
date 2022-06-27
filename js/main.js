@@ -13,3 +13,7 @@ function showmore() {
         document.getElementById("more").innerHTML = "show more"
     }
 }
+let menubtn = document.querySelector('.toggle-menu');
+menubtn.addEventListener("click", ()=>{
+    menubtn.classList.toggle("active");
+})
